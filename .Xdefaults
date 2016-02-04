@@ -1,0 +1,92 @@
+!!=====================
+
+!!设置Xftp.dpi(字体分辨率）
+
+!!=====================
+
+!! Xft.dpi:96
+
+
+!!=====================
+
+!!RXVT-unicodesetting
+
+!!=====================
+Rxvt*geometry: 80x24
+Rxvt.background:blue
+Rxvt.depth:32
+
+Rxvt.foreground:white
+
+Rxvt.inheritPixmap:true
+
+Rxvt.colorBD:yellow
+
+Rxvt.colorUL:antiquewhite
+
+Rxvt.scrollBar: True
+
+Rxvt.scrollBar_left:True
+
+Rxvt.scrollBar_floating:False
+
+Rxvt.multichar_encoding:utf-8
+
+Rxvt.scrollstyle:next
+
+
+Rxvt.scrollColor:red3
+!!AntiqueWhite
+
+Rxvt.saveLines:10000
+
+Rxvt.color12:DodgerBlue
+
+
+!Rxvt.font:xft:Vera Sans YuanTi Mono :size=15,xft:Monospace:size=15 
+!NewRxvt.preeditType:Root
+
+!!URxvt.font:xft:Bitstream Vera Sans Mono-14,xft:WenQuanYi Bitmap Song-14
+! URxvt.boldFont:xft:Bitstream Vera Sans Mono-14:Bold,xft:WenQuanYi Bitmap Song-14:Bold 
+
+URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
+URxvt.scrollWithBuffer: True
+!!一是在启动的时候加入命令行参数：
+!!    urxvt -pe tabbed
+!!二是在配置文件“.Xresources”中添加如下配置信息：
+!!    URxvt.perl-ext-common: default,tabbed
+!!则默认情况下执行urxvt就会打开多标签功能。urxvt的标签支持使用鼠标操作，同时可以使用Ctrl+Shift+左右箭头来切换标签页，使用Ctrl+Shift+向下箭头开启新标签。
+! URxvt.font:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=16
+! URxvt.boldfont:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=16 
+
+!! 支持tab
+!! Tab切换 :: SHIFT+LEFT/SHIFT+RIGHT
+!! 移动Tab顺序 :: CTRL+LEFT/CTRL+RIGHT
+!! 新建Tab :: SHIFT+DOWN
+URxvt.perl-ext-common: default,tabbed
+
+!! 设置输入法的输入风格。不设置这个的话，启动会很慢。
+! Rxvt.preeditType:Root
+! !! 设置输入法，这里要注意如果用scim的话，必须要大写，否则调不出输入法，但是我改用ibus，这个选项就不需要了。
+! URxvt.inputMethod: SCIM
+
+!! 这个相当于css中的padding
+URxvt.internalBorder: 4
+
+!! 字体
+URxvt.font:xft:Monaco:size=13:antialias=true,xft:LiHei Pro:size=13:antialias=true,xft:Inconsolata for Powerline:size=13:hinting=True;antialias:True,xft:PowerlineSymbols:size=13:hinting=True;antialias:True
+URxvt.boldFont:xft:Monaco:Bold:size=13:antialias=true,xft:LiHei Pro:Bold:size=13:antialias=true,xft:Inconsolata for Powerline:Bold:size=13:hinting=True;antialias:True,xft:PowerlineSymbols:size=13:hinting=True;antialias:True
+
+!! 透明效果
+Rxvt.transparent:true
+Rxvt.shading:58
+
+!!URxvt.title:URxvrt
+
+
+!! Emacs.Font:fontset-chinese
+!!    Emacs.Fontset-0:-*-Bitstream Vera Sans Mono-medium-r-*-*-16-*-*-*-c-*-fontset-chinese
+!   chinese-gb2312:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-*-iso10646-1,\
+!   chinese-big5-1:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-iso10646-1,\
+!   chinese-big5-2:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-*-iso10646-1
