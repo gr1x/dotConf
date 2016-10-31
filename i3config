@@ -16,6 +16,8 @@ set $mod Mod4
 exec ~/bin/xrandr.sh
 exec gnome-settings-daemon
 exec /usr/bin/xautolock -time 5 -locker /usr/local/bin/lock/lock -detectsleep
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 
 # default_orientation horizontal
 workspace 1 output DP-1
