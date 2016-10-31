@@ -44,7 +44,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec ~/bin/urxvt.sh
-bindsym $mod+t      exec gnome-terminal
+bindsym $mod+t      exec terminator #gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
