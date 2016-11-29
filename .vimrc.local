@@ -29,10 +29,12 @@ nnoremap c :set cursorline! cursorcolumn!
 
 "In insert mode, pressing Ctrl-O switches to normal mode for one command, then switches back to insert mode when the command is finished.
 :imap <C-h> <C-o>h
-:imap <C-j> <C-o>j"colorscheme torte
-
+:imap <C-j> <C-o>j
 :imap <C-k> <C-o>k
 :imap <C-l> <C-o>l
+
+"map sort function to a key
+vnoremap <leader>s :sort<CR>
 
 "============neocomplete can not support python3 files and report: 
 ""required vim compiled with +python
