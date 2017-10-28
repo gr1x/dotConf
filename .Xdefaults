@@ -57,8 +57,8 @@ URxvt.scrollWithBuffer: True
 !!二是在配置文件“.Xresources”中添加如下配置信息：
 !!    URxvt.perl-ext-common: default,tabbed
 !!则默认情况下执行urxvt就会打开多标签功能。urxvt的标签支持使用鼠标操作，同时可以使用Ctrl+Shift+左右箭头来切换标签页，使用Ctrl+Shift+向下箭头开启新标签。
-! URxvt.font:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=16
-! URxvt.boldfont:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=16 
+! URxvt.font:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=14
+! URxvt.boldfont:xft:Monaco:size=14:antialias=true,xft:WenQuanYi Bitmap Song:size=14:antialias=true:charwidth=14 
 
 !! 支持tab
 !! Tab切换 :: SHIFT+LEFT/SHIFT+RIGHT
@@ -75,8 +75,8 @@ URxvt.perl-ext-common: default,tabbed
 URxvt.internalBorder: 4
 
 !! 字体
-URxvt.font:xft:Monaco:size=13:antialias=true,xft:LiHei Pro:size=13:antialias=true,xft:Inconsolata for Powerline:size=13:hinting=True;antialias:True,xft:PowerlineSymbols:size=13:hinting=True;antialias:True
-URxvt.boldFont:xft:Monaco:Bold:size=13:antialias=true,xft:LiHei Pro:Bold:size=13:antialias=true,xft:Inconsolata for Powerline:Bold:size=13:hinting=True;antialias:True,xft:PowerlineSymbols:size=13:hinting=True;antialias:True
+URxvt.font:xft:Monaco:size=14:antialias=true,xft:LiHei Pro:size=14:antialias=true,xft:Inconsolata for Powerline:size=14:hinting=True;antialias:True,xft:PowerlineSymbols:size=14:hinting=True;antialias:True
+URxvt.boldFont:xft:Monaco:Bold:size=14:antialias=true,xft:LiHei Pro:Bold:size=14:antialias=true,xft:Inconsolata for Powerline:Bold:size=14:hinting=True;antialias:True,xft:PowerlineSymbols:size=14:hinting=True;antialias:True
 
 !! 透明效果
 Rxvt.transparent:true
@@ -86,7 +86,7 @@ Rxvt.shading:58
 
 
 !! Emacs.Font:fontset-chinese
-!!    Emacs.Fontset-0:-*-Bitstream Vera Sans Mono-medium-r-*-*-16-*-*-*-c-*-fontset-chinese
+!!    Emacs.Fontset-0:-*-Bitstream Vera Sans Mono-medium-r-*-*-14-*-*-*-c-*-fontset-chinese
 !   chinese-gb2312:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-*-iso10646-1,\
 !   chinese-big5-1:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-iso10646-1,\
 !   chinese-big5-2:-*-wenquanyi bitmap song-*-*-normal-20-*-*-*-*-*-*-iso10646-1

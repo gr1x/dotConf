@@ -1,3 +1,4 @@
+colorscheme wombat
 set background=dark "dark | light"
 set wrap
 call togglebg#map("<F2>")
@@ -7,7 +8,6 @@ set t_Co=256
 "color ir_black
 "colorscheme torte
 "color molokai
-colorscheme wombat
 color 256-jungle
 
 " required for vim-airline status color
@@ -24,14 +24,14 @@ hi CursorLine cterm=NONE ctermbg=DarkMagenta ctermfg=lightyellow
 "hi CursorLine cterm=NONE ctermbg= Darkred
 "ctermfg=black
 hi CursorColumn cterm=NONE ctermbg=Darkred
-nnoremap c :set cursorline! cursorcolumn!
+nnoremap <C-c> :set cursorline! cursorcolumn!
 " END "
 
 "In insert mode, pressing Ctrl-O switches to normal mode for one command, then switches back to insert mode when the command is finished.
-:imap <C-h> <C-o>h
-:imap <C-j> <C-o>j
-:imap <C-k> <C-o>k
-:imap <C-l> <C-o>l
+":imap <C-h> <C-o>h
+":imap <C-j> <C-o>j
+":imap <C-k> <C-o>k
+":imap <C-l> <C-o>l
 
 "map sort function to a key
 vnoremap <leader>s :sort<CR>
@@ -45,3 +45,4 @@ let g:pyflakes_use_quickfix = 1
 let g:syntastic_python_checkers=['flake8']
 let g:pymode_lint_checkers = ["pep8","pyflakes"]
 hi Normal guibg=NONE ctermbg=NONE
+
