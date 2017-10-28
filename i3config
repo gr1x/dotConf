@@ -8,21 +8,57 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# nitrogen for wallpaper
 
 set $mod Mod4
 
 #exec xrandr --output DP-1 --auto --left-of DVI-I-1 
 #exec xrandr --output DVI-I-1 --rotate left
-exec ~/bin/xrandr.sh
+
+#exec ~/bin/xrandr.sh
+exec xrandr --output VGA-0 --mode 1920x1080 --pos 1440x0 --rotate normal --output DVI-0 --primary --mode 1920x1080 --pos 3360x0 --rotate normal --output HDMI-0 --mode 1440x900 --pos 0x0 --rotate normal
+xrdb -merge ~/.Xdefaults
 exec gnome-settings-daemon
 exec /usr/bin/xautolock -time 5 -locker /usr/local/bin/lock/lock -detectsleep
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id exec ~/.dropbox-dist/dropboxd
+exec --no-startup-id ~/.dropbox-dist/dropboxd
+exec --no-startup-id nitrogen --restore
 
+
+set $tag1 "1: VIM"
+set $tag2 "2: WWW"
+set $tag3 "3: Term"
+set $tag4 "4: DOC"
+set $tag5 "5: WWW"
+set $tag6 "6: TERM"
+set $tag7 "7: VIM"
+set $tag8 "8: Paper"
+set $tag9 "9: FileExplore"
+set $tag0 "0: Music_SS"
+# switch to workspace
+bindsym $mod+1 workspace $tag1
+bindsym $mod+2 workspace $tag2
+bindsym $mod+3 workspace $tag3
+bindsym $mod+4 workspace $tag4
+bindsym $mod+5 workspace $tag5
+bindsym $mod+6 workspace $tag6
+bindsym $mod+7 workspace $tag7
+bindsym $mod+8 workspace $tag8
+bindsym $mod+9 workspace $tag9
+bindsym $mod+0 workspace $tag0
 # default_orientation horizontal
-workspace 1 output DP-1
+workspace $tag1 output VGA-0
+workspace $tag2 output VGA-0
+workspace $tag3 output VGA-0
+workspace $tag4 output VGA-0
 # default_orientation vertical
-workspace 2 output DVI-I-1
+workspace $tag5 output DVI-1
+workspace $tag6 output DVI-1
+workspace $tag7 output DVI-1
+workspace $tag8 output DVI-1
+
+workspace $tag9 output HDMI-0
+workspace $tag0 output HDMI-0
 # default_orientation horizontal
 
 
@@ -106,23 +142,6 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $tag1 "1: VIM"
-set $tag2 "2: WWW"
-set $tag3 "3: music"
-set $tag4 "4: DOC"
-set $tag5 "5: MD"
-set $tag6 "6: TERM"
-# switch to workspace
-bindsym $mod+1 workspace $tag1
-bindsym $mod+2 workspace $tag2
-bindsym $mod+3 workspace $tag3
-bindsym $mod+4 workspace $tag4
-bindsym $mod+5 workspace $tag5
-bindsym $mod+6 workspace $tag6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $tag1
@@ -141,8 +160,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec i3-exit
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+Shift+u exec ~/bin/i3lock.sh
 bindsym $mod+Shift+p exec ~/bin/i3lock.sh && systemctl suspend
