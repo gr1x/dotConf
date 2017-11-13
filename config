@@ -36,7 +36,7 @@ set $tag6 "6: TERM"
 set $tag7 "7: VIM"
 set $tag8 "8: Paper"
 set $tag9 "9: FileExplorer"
-set $tag0 "0: Music_SS"
+set $tag0 "0: Music"
 # switch to workspace
 bindsym $mod+1 workspace $tag1
 bindsym $mod+2 workspace $tag2
