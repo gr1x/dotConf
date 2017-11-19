@@ -16,9 +16,13 @@ set $mod Mod4
 #exec xrandr --output DVI-I-1 --rotate left
 
 #exec ~/bin/xrandr.sh
-#lxrandr
-exec xrandr --output VGA-0 --mode 1920x1080 --pos 1440x0 --rotate left --output DVI-0 --primary --mode 1920x1080 --pos 3360x0 --rotate normal --output HDMI-0 --mode 1440x900 --pos 0x0 --rotate normal
-exec xrdb -merge ~/.Xdefaults
+#lxrandr's configuration is save at .config/autostart/lxrandr-autostart.desktop
+# exec xrandr --output VGA-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --mode 1920x1080 --pos 1920x0 --primary --rotate normal --output DVI-0 --mode 1920x1080 --pos 3840x0 --rotate left
+#exec xrandr --output DVI-I-1 --auto --pos 0x0 --rotate normal --panning 3840x2160 --output DVI-D-0 --mode 1920x1080 --scale 2x2 --pos 3840x0 --rotate left 
+# scale 2x2 will lead to DVI-D-0's resolution error, not konwing the reason
+exec xrandr --output DVI-D-0 --auto --scale 1.5x1.5 --panning 2880x1620+0+0 --output HDMI-0 --auto --panning 3840x2160+2880+0 --primary --output DVI-I-1 --mode 1440x900 --rate 75 --scale 2x2 --panning 1800x2880+6720+0
+
+
 exec gnome-settings-daemon
 exec /usr/bin/xautolock -time 5 -locker /usr/local/bin/lock/lock -detectsleep
 exec --no-startup-id nitrogen --restore
@@ -35,8 +39,8 @@ set $tag5 "5: WWW"
 set $tag6 "6: TERM"
 set $tag7 "7: VIM"
 set $tag8 "8: Paper"
-set $tag9 "9: FileExplorer"
-set $tag0 "0: Music_SS"
+set $tag9 "9: Music"
+set $tag0 "0: FileSS"
 # switch to workspace
 bindsym $mod+1 workspace $tag1
 bindsym $mod+2 workspace $tag2
@@ -49,18 +53,18 @@ bindsym $mod+8 workspace $tag8
 bindsym $mod+9 workspace $tag9
 bindsym $mod+0 workspace $tag0
 # default_orientation horizontal
-workspace $tag1 output VGA-0
-workspace $tag2 output VGA-0
-workspace $tag3 output VGA-0
-workspace $tag4 output VGA-0
+workspace $tag1 output DVI-D-0
+workspace $tag2 output DVI-D-0
+workspace $tag3 output DVI-D-0
+workspace $tag4 output DVI-D-0
 # default_orientation vertical
-workspace $tag5 output DVI-0
-workspace $tag6 output DVI-0
-workspace $tag7 output DVI-0
-workspace $tag8 output DVI-0
+workspace $tag5 output HDMI-0
+workspace $tag6 output HDMI-0
+workspace $tag7 output HDMI-0
+workspace $tag8 output HDMI-0
 
-workspace $tag9 output HDMI-0
-workspace $tag0 output HDMI-0
+workspace $tag9 output DVI-I-1
+workspace $tag0 output DVI-I-1
 # default_orientation horizontal
 
 
